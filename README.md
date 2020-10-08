@@ -1,6 +1,6 @@
 # Twilio guideline
 - How to config serverless with Twilio using voice programing.
-- So you can making a calling directly from your app which built just by HTML/Javascript (Of course stick in CSS more beauty - just for fun :trollface:)
+- So you can making a calling directly from your app which built just by HTML/Javascript (Of course stick with CSS more beauty - just for fun :trollface:)
 - References:
   - [**Twilio Client JavaScript Quickstart**](https://www.twilio.com/docs/voice/client/javascript/quickstart)
   - [**Twilio.Device api**](https://www.twilio.com/docs/voice/client/javascript/device)
