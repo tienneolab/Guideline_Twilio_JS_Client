@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Twilio Client Quickstart</title>
+    <link rel="stylesheet" href="site.css">
+    <script src="env.js"></script>
+    <script>
+        // Just for Cordova apps.
+        document.addEventListener('deviceready', function () {
+            // Just for iOS devices.
+            if (window.cordova.platformId === 'ios') {
+                cordova.plugins.iosrtc.registerGlobals();
+
+                // load adapter.js
+                var adapterVersion = 'latest';
+                var script = document.createElement("script");
+                script.type = "text/javascript";
+                script.src = "https://webrtc.github.io/adapter/adapter-" + adapterVersion + ".js";
+                script.async = false;
+                document.getElementsByTagName("head")[0].appendChild(script);
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div id="controls">
+        <div id="info">
+            <p class="instructions">Twilio Client</p>
+            <div id="client-name"></div>
+            <div id="output-selection">
+                <label>Ringtone Devices</label>
+                <select id="ringtone-devices" multiple></select>
+                <label>Speaker Devices</label>
+                <select id="speaker-devices" multiple></select><br />
+                <a id="get-devices">Seeing unknown devices?</a>
+            </div>
+        </div>
+        <div id="call-controls">
+            <p class="instructions">Make a Call:</p>
+            <input id="phone-number" type="text" placeholder="Enter a phone # or client name" />
+            <button id="button-call">Call</button>
+            <button id="button-hangup">Hangup</button>
+            <div id="volume-indicators">
+                <label>Mic Volume</label>
+                <div id="input-volume"></div><br /><br />
+                <label>Speaker Volume</label>
+                <div id="output-volume"></div>
+            </div>
+        </div>
+        <div id="log"></div>
+    </div>
+
+
+    <script src="https://sdk.twilio.com/js/client/v1.12/twilio.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="quickstart.js"></script>
+</body>
+
+</html>
