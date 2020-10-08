@@ -1,6 +1,6 @@
 # Twilio guideline
 - How to config serverless with Twilio using voice programing.
-- So you can making a calling directly from your app which built just by HTML/Javascript (Of course stick in CSS more beauty - just for fun :satisfied:)
+- So you can making a calling directly from your app which built just by HTML/Javascript (Of course stick in CSS more beauty - just for fun :trollface:)
 - References:
   - [**Twilio Client JavaScript Quickstart**](https://www.twilio.com/docs/voice/client/javascript/quickstart)
   - [**Twilio.Device api**](https://www.twilio.com/docs/voice/client/javascript/device)
@@ -14,6 +14,7 @@
 ### Step 1: Create a TwiML XML file
 - Access [TwiML Bin](https://www.twilio.com/console/twiml-bins)
 - Click add button :heavy_plus_sign: to create new and fill the TWIML input with section sample below. (change **enter_your_caller_id**)
+- **enter_your_caller_id** is the number you bought. [Check here](https://www.twilio.com/console/phone-numbers/incoming)
 ```
 <Response>
   <Dial callerId="enter_your_caller_id">
@@ -28,7 +29,7 @@
 ### Step 2: Create a TwiML App
 - Go to [**TwiML Apps**](https://www.twilio.com/console/voice/twiml/apps) in *Programmable Voice* category and create [new](https://www.twilio.com/console/voice/twiml/apps/create) *TwiML App*
 - Fill the **FRIENDLY NAME** with your choice
-- Fill the **Voice - REQUEST URL** with **URL Properties** in `Create a TwiML XML file` section
+- Fill the **Voice - REQUEST URL** with **URL Properties** in `Create a TwiML XML file` section above
 - Access TwiML Apps created and *keep in eyes* the **SID value**
 
 ### Step 3: Create new function (that's will handle request in Twilio, meaning serverless deployment)
@@ -40,7 +41,8 @@
 
 ## How to see the demo
 - Clone this repo.
-- Edit `env.js` with your URL created in Twilio via [Functions](https://www.twilio.com/console/functions/manage) - You will know how to get **your URL** in `Step by step configuration` section.
+- Edit `env.js` with your URL created `Create new function` section above [Functions](https://www.twilio.com/console/functions/manage)
+- Open the index.html file via browser and enjoy :skull:
 
 ## Notice
 - With trials account you just can dial to a verified number. ['Verified Caller IDs'](https://www.twilio.com/console/phone-numbers/verified)
