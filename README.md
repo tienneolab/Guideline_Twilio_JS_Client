@@ -3,16 +3,16 @@
 - So you can making a calling directly from your app which built just by HTML/Javascript (Of course stick in CSS more beauty - just for fun :satisfied:)
 - References:
   - [**Twilio Client JavaScript Quickstart**](https://www.twilio.com/docs/voice/client/javascript/quickstart)
-  - [**Twilio.Device api**]('https://www.twilio.com/docs/voice/client/javascript/device')
+  - [**Twilio.Device api**](https://www.twilio.com/docs/voice/client/javascript/device)
 
 ## Prerequisite
-- Create a **Twilio account**. Flowing [this]('https://www.twilio.com/try-twilio') step
+- Create a **Twilio account**. Flowing [this](https://www.twilio.com/try-twilio) step
 
 ## Step by step configuration
 - After you created a account and got a number and verified
 
 ### Step 1: Create a TwiML XML file
-- Access [TwiML Bin]('https://www.twilio.com/console/twiml-bins')
+- Access [TwiML Bin](https://www.twilio.com/console/twiml-bins)
 - Click add button :heavy_plus_sign: to create new and fill the TWIML input with section sample below. (change **enter_your_caller_id**)
 ```
 <Response>
@@ -26,13 +26,13 @@
 - And keep in eyes the **URL Properties**
 
 ### Step 2: Create a TwiML App
-- Go to [**TwiML Apps**]('https://www.twilio.com/console/voice/twiml/apps') in *Programmable Voice* category and create [new]('https://www.twilio.com/console/voice/twiml/apps/create') *TwiML App*
+- Go to [**TwiML Apps**](https://www.twilio.com/console/voice/twiml/apps) in *Programmable Voice* category and create [new](https://www.twilio.com/console/voice/twiml/apps/create) *TwiML App*
 - Fill the **FRIENDLY NAME** with your choice
 - Fill the **Voice - REQUEST URL** with **URL Properties** in `Create a TwiML XML file` section
 - Access TwiML Apps created and *keep in eyes* the **SID value**
 
 ### Step 3: Create new function (that's will handle request in Twilio, meaning serverless deployment)
-- Go to [**Functions (Classic)**]('https://www.twilio.com/console/functions/manage') in *Functions* category
+- Go to [**Functions (Classic)**](https://www.twilio.com/console/functions/manage) in *Functions* category
 - Click add button :heavy_plus_sign: to create new and select **Twilio Client Quickstart**
 - Enter the **TWIML_APP_SID** which SID value we got from `Create a TwiML App` above.
 - Enter the **CALLER_ID** phone numbers you bought
@@ -40,10 +40,10 @@
 
 ## How to see the demo
 - Clone this repo.
-- Edit `env.js` with your URL created in Twilio via [Functions]('https://www.twilio.com/console/functions/manage') - You will know how to get **your URL** in `Step by step configuration` section.
+- Edit `env.js` with your URL created in Twilio via [Functions](https://www.twilio.com/console/functions/manage) - You will know how to get **your URL** in `Step by step configuration` section.
 
 ## Notice
-- With trials account you just can dial to a verified number. ['Verified Caller IDs']('https://www.twilio.com/console/phone-numbers/verified')
+- With trials account you just can dial to a verified number. ['Verified Caller IDs'](https://www.twilio.com/console/phone-numbers/verified)
 - In the TwiML XML file you can include the values of HTTP parameters (Example: {{From}} - {{To}})
 
 ## Author
