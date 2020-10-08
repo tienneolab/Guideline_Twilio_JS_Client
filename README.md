@@ -1,5 +1,5 @@
 # Twilio guideline
-- How to config serverless with Twilio using voice programing.
+- How to config serverless with Twilio using voice programing
 - So you can making a calling directly from your app which built just by HTML/Javascript (Of course stick with CSS more beauty - just for fun :trollface:)
 - References:
   - [**Twilio Client JavaScript Quickstart**](https://www.twilio.com/docs/voice/client/javascript/quickstart)
@@ -14,7 +14,7 @@
 ### Step 1: Create a TwiML XML file
 - Access [TwiML Bin](https://www.twilio.com/console/twiml-bins)
 - Click add button :heavy_plus_sign: to create new and fill the TWIML input with section sample below. (change **enter_your_caller_id**)
-- **enter_your_caller_id** is the number you bought. [Check here](https://www.twilio.com/console/phone-numbers/incoming)
+- **enter_your_caller_id** which is the phone number you bought - [check here](https://www.twilio.com/console/phone-numbers/incoming)
 ```
 <Response>
   <Dial callerId="enter_your_caller_id">
@@ -35,12 +35,12 @@
 ### Step 3: Create new function (that's will handle request in Twilio, meaning serverless deployment)
 - Go to [**Functions (Classic)**](https://www.twilio.com/console/functions/manage) in *Functions* category
 - Click add button :heavy_plus_sign: to create new and select **Twilio Client Quickstart**
-- Enter the **TWIML_APP_SID** which SID value we got from `Create a TwiML App` above.
+- Enter the **TWIML_APP_SID** which SID value we got from `Create a TwiML App` above
 - Enter the **CALLER_ID** phone numbers you bought
 - Access the *Function* created and using the **PATH** to get token by a request. Meaning you can use that **PATH** to replace the `tokenUrl` in the `env.js` repository's file
 
 ## How to see the demo
-- Clone this repo.
+- Clone this repo
 - Edit `env.js` with your URL created `Create new function` section above [Functions](https://www.twilio.com/console/functions/manage)
 - Open the index.html file via browser and enjoy :skull:
 
@@ -50,7 +50,7 @@
 
 ## Author
 - [Vincent Nguyen](mailto:vannhd@ethan-tech.com)
-- Don't hesitate to contact me if you get any trouble when installing on Twilio.
+- Don't hesitate to contact me if you get any trouble when installing on Twilio
 
 ## License
 - MIT
