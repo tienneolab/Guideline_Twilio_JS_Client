@@ -48,6 +48,9 @@
 - With trials account you just can dial to a verified number. ['Verified Caller IDs'](https://www.twilio.com/console/phone-numbers/verified)
 - In the TwiML XML file you can include the values of HTTP parameters (Example: {{From}} - {{To}})
 
+## Contributor
+- [HiepPB](mailto:hieppb@ethan-tech.com)
+
 ## Author
 - [Vincent Nguyen](mailto:vannhd@ethan-tech.com)
 - Don't hesitate to contact me if you get any trouble when installing on Twilio
