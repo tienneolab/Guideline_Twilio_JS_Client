@@ -13,7 +13,7 @@
 
 ### Step 1: Create a TwiML XML file
 - Access [TwiML Bin](https://www.twilio.com/console/twiml-bins)
-- Click add button :heavy_plus_sign: to create new and fill the TWIML input with section sample below. (change **enter_your_caller_id**)
+- Click add button :heavy_plus_sign: to create new and fill the TWIML input with section sample below (change **enter_your_caller_id**)
 - **enter_your_caller_id** which is the phone number you bought - [check here](https://www.twilio.com/console/phone-numbers/incoming)
 ```
 <Response>
@@ -45,7 +45,7 @@
 - Open the index.html file via browser and enjoy :skull:
 
 ## Notice
-- With trials account you just can dial to a verified number. ['Verified Caller IDs'](https://www.twilio.com/console/phone-numbers/verified)
+- With trials account you just can dial to a verified number ['Verified Caller IDs'](https://www.twilio.com/console/phone-numbers/verified)
 - In the TwiML XML file you can include the values of HTTP parameters (Example: {{From}} - {{To}})
 
 ## Contributor
