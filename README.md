@@ -4,6 +4,7 @@
 - References:
   - [**Twilio Client JavaScript Quickstart**](https://www.twilio.com/docs/voice/client/javascript/quickstart)
   - [**Twilio.Device api**](https://www.twilio.com/docs/voice/client/javascript/device)
+  - [**Access Tokens**](https://www.twilio.com/docs/iam/access-tokens)
 
 ## Prerequisite
 - Create a **Twilio account**. Flowing [this](https://www.twilio.com/try-twilio) step
@@ -32,12 +33,22 @@
 - Fill the **Voice - REQUEST URL** with **URL Properties** in `Create a TwiML XML file` section above
 - Access TwiML Apps created and *keep in eyes* the **SID value**
 
-### Step 3: Create new function (that's will handle request in Twilio, meaning serverless deployment)
+### Step 3: Create new API Keys
+- Go to [**API Keys**](https://www.twilio.com/console/video/project/api-keys) in *Programmable Video* category
+- Click add button :heavy_plus_sign: to create new and fill out **FRIENDLY NAME** textbox
+- After created, we should `keeping SECRET values in your machine`.
+
+### Step 4: Create new function (that's will handle request in Twilio, meaning serverless deployment)
 - Go to [**Functions (Classic)**](https://www.twilio.com/console/functions/manage) in *Functions* category
-- Click add button :heavy_plus_sign: to create new and select **Twilio Client Quickstart**
-- Enter the **TWIML_APP_SID** which SID value we got from `Create a TwiML App` above
-- Enter the **CALLER_ID** phone numbers you bought
-- Access the *Function* created and using the **PATH** to get token by a request. Meaning you can use that **PATH** to replace the `tokenUrl` in the `env.js` repository's file
+- Click add button :heavy_plus_sign: to create new and select **Blank**
+- Fill out the **FUNCTION NAME** and **PATH** as your wish
+- Use entire the content in `resources/access_token.js` copy to **CODE** section and then **Save** it
+- Then move to [Configure](https://www.twilio.com/console/functions/configure) tab and make sure the **Enable ACCOUNT_SID and AUTH_TOKEN** checked
+- In the screen, click Add button below **Environment Variables** with the key value pairs
+  - TWIML_APP_SID - **SID value from Step 2: Create a TwiML App**
+  - TWILIO_API_KEY - **SID value from Step 3: Create new API Keys**
+  - TWILIO_API_SECRET - **SECRET values you stored from Step 3: Create new API Keys**
+- Access the *Function* created and using the **PATH url** to get token by making a request. Meaning you can use that **PATH** to replace the `tokenUrl` in the `env.js` repository's file
 
 ## How to see the demo
 - Clone this repo
@@ -45,7 +56,7 @@
 - Open the index.html file via browser and enjoy :skull:
 
 ## Notice
-- With trials account you just can dial to a verified number ['Verified Caller IDs'](https://www.twilio.com/console/phone-numbers/verified)
+- With trials account you just can only dial to a verified number ['Verified Caller IDs'](https://www.twilio.com/console/phone-numbers/verified)
 - In the TwiML XML file you can include the values of HTTP parameters (Example: {{From}} - {{To}})
 
 ## Contributor
