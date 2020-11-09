@@ -29,18 +29,21 @@
 </Response>
 ```
 
-ENV dev: https://dev.acall.jp/hook/twilio?Token={{Token}}
-Other envs please change: https://dev.acall.jp
-
+```
+  DEV ENV: https://dev.acall.jp/hook/twilio?Token={{Token}}
+  Other envs please change: <baseURL>/hook/twilio?Token={{Token}}
+```
 - And keep in eyes the **URL Properties**
 
 ### Step 2: Create a TwiML App
 - Go to [**TwiML Apps**](https://www.twilio.com/console/voice/twiml/apps) in *Programmable Voice* category and create [new](https://www.twilio.com/console/voice/twiml/apps/create) *TwiML App*
 - Fill the **FRIENDLY NAME** with your choice
 - Fill the **Voice - REQUEST URL** with **Webhook URL** in `Create a TwiML XML file` section above
+```
   Webhook URL: 
-      DEV: https://dev.acall.jp/hook/twilio?Token={{Token}}
-      Other: <base_url>/hook/twilio?Token={{Token}}
+      DEV: https://dev.acall.jp/hook/twilio
+      Other: <base_url>/hook/twilio
+```
 - Access TwiML Apps created and *keep in eyes* the **SID value**
 
 ### Step 3: Create new API Keys
